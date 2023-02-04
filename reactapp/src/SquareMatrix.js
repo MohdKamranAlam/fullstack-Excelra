@@ -17,6 +17,7 @@ const Square = ({ value, onChange }) => (
 
 const Matrix = ({ matrix, onChange }) => (
   <div className="matrix">
+
     {matrix.map((row, i) => (
       <div key={i} className="row">
         {row.map((value, j) => (
@@ -38,7 +39,7 @@ const SquareMatrix = () => {
   ]);
 
   const handleNChange = (e) => {
-    const newN = parseInt(e.target.value, 10);
+    const newN = parseInt(e.target.value, 10); //Converts the string value of target element to a base-10 integer
     if (!isNaN(newN)) {
       setN(newN);
       setMatrix(Array.from({ length: newN }, (_, i) => 
@@ -55,11 +56,13 @@ const SquareMatrix = () => {
 
   return (
     <div>
+      <h2>Square box Matrix Based on input</h2>
       <input
         type="text"
         value={n}
         onChange={handleNChange}
         style={{ marginBottom: '10px' }}
+        placeholder='Only numeric value'
       />
       <Matrix matrix={matrix} onChange={handleChange} />
     </div>

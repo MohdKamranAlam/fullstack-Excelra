@@ -14,17 +14,17 @@ like ->
 POST DATA:
 
 Request:
-<!-- {
+{
     "taskData":"this assessment crud apps2"
-} -->
+}
 
 Response:
-<!-- {
+{
     "_id": "63de7466dae62ff9bd821bbf",
     "taskData": "s2w",
     "date": "2023-02-04T15:06:14.910Z",
     "__v": 0
-} -->
+}
 
 
 # B) reactapp: 
