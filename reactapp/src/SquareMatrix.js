@@ -1,36 +1,5 @@
 import React, { useState } from 'react';
-
-const Square = ({ value, onChange }) => (
-  <input
-    type="text"
-    className="square"
-    style={{
-      width: '50px',
-      height: '50px',
-      textAlign: 'center',
-      backgroundColor: 'black'
-    }}
-    value={value}
-    onChange={(e) => onChange(e.target.value)}
-  />
-);
-
-const Matrix = ({ matrix, onChange }) => (
-  <div className="matrix">
-
-    {matrix.map((row, i) => (
-      <div key={i} className="row">
-        {row.map((value, j) => (
-          <Square
-            key={j}
-            value={value}
-            onChange={(newValue) => onChange(i, j, newValue)}
-          />
-        ))}
-      </div>
-    ))}
-  </div>
-);
+import Matrix from './component/Matrix';
 
 const SquareMatrix = () => {
   const [n, setN] = useState('');
